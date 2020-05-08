@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="0dp"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:padding="12dp"
+        android:baselineAligned="false"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/image_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="10dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp">
+
+                <ImageView
+                    android:id="@+id/cart_image"
+                    android:background="@drawable/corner_background"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/demo_food"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp">
+
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/name_section"
+            android:layout_toStartOf="@id/price_section"
+            android:layout_toEndOf="@id/image_section"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp">
+
+            <TextView
+                android:id="@+id/cart_food_name"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:text="Chicken Burger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+            <LinearLayout
+
+
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:id="@+id/cart_food_qnt_decrease"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="-"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/cart_food_qnt"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:id="@+id/cart_qnt_increase"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="+"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_alignParentEnd="true"
+            android:id="@+id/price_section"
+
+            android:layout_width="70dp"
+            android:layout_height="65dp">
+
+
+            <TextView
+                android:id="@+id/cart_food_price"
+                android:layout_alignParentEnd="true"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:text="$ 12.00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/cart_food_remove"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/cancel_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
